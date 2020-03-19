@@ -1,0 +1,10 @@
+D:\Chelo\Personal\Proyectos\Orden\Modelo\bin\Debug\Modelo.dll.config
+D:\Chelo\Personal\Proyectos\Orden\Modelo\bin\Debug\Modelo.dll
+D:\Chelo\Personal\Proyectos\Orden\Modelo\bin\Debug\Modelo.pdb
+D:\Chelo\Personal\Proyectos\Orden\Modelo\bin\Debug\EntityFramework.dll
+D:\Chelo\Personal\Proyectos\Orden\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+D:\Chelo\Personal\Proyectos\Orden\Modelo\bin\Debug\EntityFramework.xml
+D:\Chelo\Personal\Proyectos\Orden\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+D:\Chelo\Personal\Proyectos\Orden\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+D:\Chelo\Personal\Proyectos\Orden\Modelo\obj\Debug\Modelo.dll
+D:\Chelo\Personal\Proyectos\Orden\Modelo\obj\Debug\Modelo.pdb

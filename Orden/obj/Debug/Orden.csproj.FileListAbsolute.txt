@@ -1,0 +1,6 @@
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\Orden.dll.config
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\Orden.dll
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\Orden.pdb
+D:\Chelo\Personal\Proyectos\Orden\Orden\obj\Debug\Orden.csprojResolveAssemblyReference.cache
+D:\Chelo\Personal\Proyectos\Orden\Orden\obj\Debug\Orden.dll
+D:\Chelo\Personal\Proyectos\Orden\Orden\obj\Debug\Orden.pdb

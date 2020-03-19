@@ -1,0 +1,16 @@
+D:\Chelo\Personal\Proyectos\Orden\Orden\obj\Debug\0 - Orden.csprojResolveAssemblyReference.cache
+D:\Chelo\Personal\Proyectos\Orden\Orden\obj\Debug\Orden.dll
+D:\Chelo\Personal\Proyectos\Orden\Orden\obj\Debug\Orden.pdb
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\Orden.dll.config
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\Orden.dll
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\Orden.pdb
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\01 - Servicios.dll
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\EntityFramework.dll
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\EntityFramework.SqlServer.dll
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\Modelo.dll
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\02 - DataAccess.dll
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\01 - Servicios.pdb
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\Modelo.pdb
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\EntityFramework.xml
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\EntityFramework.SqlServer.xml
+D:\Chelo\Personal\Proyectos\Orden\Orden\bin\02 - DataAccess.pdb

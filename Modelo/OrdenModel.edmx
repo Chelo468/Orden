@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OrdenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Caja">
+          <Key>
+            <PropertyRef Name="id_caja" />
+          </Key>
+          <Property Name="id_caja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="200" />
+          <Property Name="modulo" Type="varchar" MaxLength="50" />
+          <Property Name="estante" Type="varchar" MaxLength="50" />
+          <Property Name="descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Objeto">
+          <Key>
+            <PropertyRef Name="id_objeto" />
+          </Key>
+          <Property Name="id_objeto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="200" />
+          <Property Name="descripcion" Type="varchar" MaxLength="200" />
+          <Property Name="id_caja" Type="int" />
+          <Property Name="fecha_guardado" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_Objeto_Caja">
+          <End Role="Caja" Type="Self.Caja" Multiplicity="0..1" />
+          <End Role="Objeto" Type="Self.Objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caja">
+              <PropertyRef Name="id_caja" />
+            </Principal>
+            <Dependent Role="Objeto">
+              <PropertyRef Name="id_caja" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OrdenModelStoreContainer">
+          <EntitySet Name="Caja" EntityType="Self.Caja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Objeto" EntityType="Self.Objeto" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Objeto_Caja" Association="Self.FK_Objeto_Caja">
+            <End Role="Caja" EntitySet="Caja" />
+            <End Role="Objeto" EntitySet="Objeto" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OrdenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Caja">
+          <Key>
+            <PropertyRef Name="id_caja" />
+          </Key>
+          <Property Name="id_caja" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="modulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="estante" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Objeto" Relationship="Self.FK_Objeto_Caja" FromRole="Caja" ToRole="Objeto" />
+        </EntityType>
+        <EntityType Name="Objeto">
+          <Key>
+            <PropertyRef Name="id_objeto" />
+          </Key>
+          <Property Name="id_objeto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="id_caja" Type="Int32" />
+          <Property Name="fecha_guardado" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Caja" Relationship="Self.FK_Objeto_Caja" FromRole="Objeto" ToRole="Caja" />
+        </EntityType>
+        <Association Name="FK_Objeto_Caja">
+          <End Role="Caja" Type="Self.Caja" Multiplicity="0..1" />
+          <End Role="Objeto" Type="Self.Objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caja">
+              <PropertyRef Name="id_caja" />
+            </Principal>
+            <Dependent Role="Objeto">
+              <PropertyRef Name="id_caja" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OrdenEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Caja" EntityType="Self.Caja" />
+          <EntitySet Name="Objeto" EntityType="Self.Objeto" />
+          <AssociationSet Name="FK_Objeto_Caja" Association="Self.FK_Objeto_Caja">
+            <End Role="Caja" EntitySet="Caja" />
+            <End Role="Objeto" EntitySet="Objeto" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OrdenModelStoreContainer" CdmEntityContainer="OrdenEntities">
+          <EntitySetMapping Name="Caja">
+            <EntityTypeMapping TypeName="OrdenModel.Caja">
+              <MappingFragment StoreEntitySet="Caja">
+                <ScalarProperty Name="id_caja" ColumnName="id_caja" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="modulo" ColumnName="modulo" />
+                <ScalarProperty Name="estante" ColumnName="estante" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Objeto">
+            <EntityTypeMapping TypeName="OrdenModel.Objeto">
+              <MappingFragment StoreEntitySet="Objeto">
+                <ScalarProperty Name="id_objeto" ColumnName="id_objeto" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="id_caja" ColumnName="id_caja" />
+                <ScalarProperty Name="fecha_guardado" ColumnName="fecha_guardado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

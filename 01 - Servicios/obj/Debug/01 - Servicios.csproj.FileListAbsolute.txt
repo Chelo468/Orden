@@ -1,0 +1,11 @@
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\bin\Debug\01 - Servicios.dll
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\bin\Debug\01 - Servicios.pdb
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\bin\Debug\02 - DataAccess.dll
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\bin\Debug\Modelo.dll
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\bin\Debug\EntityFramework.dll
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\bin\Debug\02 - DataAccess.pdb
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\bin\Debug\Modelo.pdb
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\bin\Debug\EntityFramework.xml
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\obj\Debug\01 - Servicios.csprojResolveAssemblyReference.cache
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\obj\Debug\01 - Servicios.dll
+D:\Chelo\Personal\Proyectos\Orden\01 - Servicios\obj\Debug\01 - Servicios.pdb

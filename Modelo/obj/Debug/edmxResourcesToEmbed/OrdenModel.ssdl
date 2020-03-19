@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrdenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Caja">
+    <Key>
+      <PropertyRef Name="id_caja" />
+    </Key>
+    <Property Name="id_caja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="200" />
+    <Property Name="modulo" Type="varchar" MaxLength="50" />
+    <Property Name="estante" Type="varchar" MaxLength="50" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Objeto">
+    <Key>
+      <PropertyRef Name="id_objeto" />
+    </Key>
+    <Property Name="id_objeto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="200" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="id_caja" Type="int" />
+    <Property Name="fecha_guardado" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Objeto_Caja">
+    <End Role="Caja" Type="Self.Caja" Multiplicity="0..1" />
+    <End Role="Objeto" Type="Self.Objeto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Caja">
+        <PropertyRef Name="id_caja" />
+      </Principal>
+      <Dependent Role="Objeto">
+        <PropertyRef Name="id_caja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OrdenModelStoreContainer">
+    <EntitySet Name="Caja" EntityType="Self.Caja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Objeto" EntityType="Self.Objeto" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Objeto_Caja" Association="Self.FK_Objeto_Caja">
+      <End Role="Caja" EntitySet="Caja" />
+      <End Role="Objeto" EntitySet="Objeto" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

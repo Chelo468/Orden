@@ -1,0 +1,11 @@
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\obj\Debug\02 - DataAccess.csprojResolveAssemblyReference.cache
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\bin\Debug\02 - DataAccess.dll
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\bin\Debug\02 - DataAccess.pdb
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\bin\Debug\EntityFramework.dll
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\bin\Debug\Modelo.dll
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\bin\Debug\Modelo.pdb
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\bin\Debug\EntityFramework.xml
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\obj\Debug\02 - DataAccess.dll
+D:\Chelo\Personal\Proyectos\Orden\02 - DataAccess\obj\Debug\02 - DataAccess.pdb
